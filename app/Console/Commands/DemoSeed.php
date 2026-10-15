@@ -42,6 +42,7 @@ class DemoSeed extends Command
             [
                 'title' => 'Autumn sale',
                 'message' => $text('**Autumn sale:**', ' 20% off every bag of beans'),
+                'phone_message' => $text('**Autumn sale:**', ' 20% off'),
                 'code_source' => 'text',
                 'code' => 'AUTUMN20',
                 'countdown' => true,
