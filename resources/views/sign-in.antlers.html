@@ -1,0 +1,8 @@
+<h1>Sign in</h1>
+{{ user:login_form redirect="/" }}
+    {{ if errors }}<div class="notice" role="alert">{{ errors }}{{ value }}{{ /errors }}</div>{{ /if }}
+    <p><label>Email <input type="email" name="email" autocomplete="email" required></label></p>
+    <p><label>Password <input type="password" name="password" autocomplete="current-password" required></label></p>
+    <p><button type="submit">Sign in</button></p>
+{{ /user:login_form }}
+<p class="muted">Try ada@example.com (in the Members group) with the password “password”, after <code>php please demo:users</code>.</p>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ (title ?? site:name) | sanitize }} · Harbour Coffee</title>
+    <link rel="stylesheet" href="/css/site.css">
+    {{ promo_bar:assets }}
+</head>
+<body>
+    {{# The promo bars, at the very top. #}}
+    {{ promo_bar }}
+
+    <header class="site-header">
+        <a class="logo" href="/">Harbour Coffee</a>
+        <nav aria-label="Main">
+            <a href="/shop">Shop</a>
+            <a href="/about">About</a>
+            {{ nocache }}
+                <a href="/basket">Basket{{ cart }}{{ if line_items | length }} ({{ line_items | length }}){{ /if }}{{ /cart }}</a>
+                {{ if logged_in }}
+                    <a href="/!/auth/logout?redirect=/">Sign out ({{ current_user:name ?? current_user:email }})</a>
+                {{ else }}
+                    <a href="/sign-in">Sign in</a>
+                {{ /if }}
+            {{ /nocache }}
+        </nav>
+    </header>
+
+    <main id="main">
+        {{ template_content }}
+    </main>
+
+    <footer class="site-footer">
+        <p>A made-up shop for trying <a href="https://github.com/1994limited/promo-bar-statamic">Promo Bar</a>. Nothing here is for sale.</p>
+    </footer>
+</body>
+</html>

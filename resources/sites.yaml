@@ -1,0 +1,6 @@
+default:
+  name: 'Harbour Coffee'
+  url: /
+  locale: en_GB
+  attributes:
+    currency: GBP

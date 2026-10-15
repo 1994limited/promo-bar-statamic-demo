@@ -1,0 +1,10 @@
+<article class="product">
+    <h1>{{ title }}</h1>
+    <p>{{ blurb }}</p>
+    <p class="price">{{ price }}</p>
+    {{ cart:add }}
+        <input type="hidden" name="product" value="{{ id }}">
+        <label>Quantity <input type="number" name="quantity" value="1" min="1" max="20"></label>
+        <button type="submit">Add to basket</button>
+    {{ /cart:add }}
+</article>

@@ -1,0 +1,20 @@
+<h1>Your basket</h1>
+
+{{ if {cart:is_empty} }}
+    <p>Your basket is empty. <a href="/shop">Have a look round the shop</a>.</p>
+{{ else }}
+    <table class="lines">
+        <thead><tr><th>Item</th><th class="num">Price</th></tr></thead>
+        <tbody>
+        {{ cart:line_items }}
+            <tr>
+                <td><strong>{{ product:title }}</strong>{{ if quantity > 1 }} × {{ quantity }}{{ /if }}
+                    {{ cart:remove :line_item="id" }}<button class="link">Remove</button>{{ /cart:remove }}
+                </td>
+                <td class="num">{{ sub_total }}</td>
+            </tr>
+        {{ /cart:line_items }}
+        </tbody>
+    </table>
+    <p class="total">Subtotal: <strong>{{ cart:sub_total }}</strong></p>
+{{ /if }}

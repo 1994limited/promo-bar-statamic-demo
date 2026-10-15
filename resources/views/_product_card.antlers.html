@@ -1,0 +1,10 @@
+<article class="card">
+    <h2><a href="{{ url }}">{{ title }}</a></h2>
+    <p class="muted">{{ blurb }}</p>
+    <p class="price">{{ price }}</p>
+    {{ cart:add }}
+        <input type="hidden" name="product" value="{{ id }}">
+        <input type="hidden" name="quantity" value="1">
+        <button type="submit">Add to basket</button>
+    {{ /cart:add }}
+</article>

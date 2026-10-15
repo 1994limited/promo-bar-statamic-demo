@@ -1,0 +1,36 @@
+title: Product
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              display: Title
+              validate:
+                - required
+          -
+            handle: price
+            field:
+              type: money
+              display: Price
+              width: 50
+          -
+            handle: blurb
+            field:
+              type: textarea
+              display: Blurb
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

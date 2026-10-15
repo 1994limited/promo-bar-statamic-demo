@@ -1,0 +1,11 @@
+<section class="hero">
+    <h1>Small-batch coffee, roasted by the sea</h1>
+    <p>Single origins and house blends, roasted every Tuesday and posted on Wednesday.</p>
+    <p><a class="button" href="/shop">Shop coffee</a></p>
+</section>
+
+<section class="grid">
+    {{ collection:products limit="3" }}
+        {{ partial:product_card }}
+    {{ /collection:products }}
+</section>
