@@ -2,7 +2,7 @@
 
 A small, made-up coffee shop built with [Statamic](https://statamic.com), [Cargo](https://builtwithcargo.dev) and [Promo Bar](https://github.com/1994limited/promo-bar-statamic). Every screenshot in the Promo Bar docs comes from it. Run it to try Promo Bar before you build with it, or copy its templates.
 
-![Harbour Coffee's shop, with a sale bar, free delivery progress and a newsletter bar](https://raw.githubusercontent.com/1994limited/promo-bar-statamic/main/docs/images/shop.png)
+![Harbour Coffee's shop, with a sale bar, free delivery progress and a newsletter bar](https://raw.githubusercontent.com/1994limited/statamic-marketplace/main/promo-bar/charts/shop.png)
 
 It has five bars:
 
@@ -52,9 +52,8 @@ Sign in as Ada to see the members' bar replace the newsletter on the same cached
 | `resources/addons/promo-bar-statamic.yaml` | The Promo Bar settings: bars stacked |
 | `resources/views/sign-in.antlers.html` | Signing in, for the members' bar |
 | `public/css/site.css` | The shop's own styles. The bars use Promo Bar's presets. |
-| `scripts/screenshots.mjs` | How the docs' screenshots are taken (Playwright with your own Chrome) |
 
-`routes/web.php` has two routes for taking screenshots (signing in as a demo user, a ready-made basket). They only exist when `APP_ENV=local`.
+`routes/web.php` has two routes for taking screenshots (signing in as a demo user, a ready-made basket). They only exist when `APP_ENV=local`. The docs' screenshots are taken by the script in [`promo-bar/tools`](https://github.com/1994limited/statamic-marketplace/tree/main/promo-bar/tools) of the statamic-marketplace repo (Playwright with your own Chrome).
 
 ## Licence
 
